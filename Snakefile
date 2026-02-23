@@ -220,7 +220,7 @@ rule blast:
         blastn -task megablast -query results/SRR5660044/spades_output/longest_contig.fasta -db betaherpesvirinae -out results/SRR5660044/blast_results.tsv -max_hsps 1 -outfmt '6 sacc pident length qstart qend sstart send bitscore evalue stitle'
         blastn -task megablast -query results/SRR5660045/spades_output/longest_contig.fasta -db betaherpesvirinae -out results/SRR5660045/blast_results.tsv -max_hsps 1 -outfmt '6 sacc pident length qstart qend sstart send bitscore evalue stitle'
         """
-add blast results to pipeline report
+#add blast results to pipeline report
 rule add_blast_to_report:
     input:
         "results/SRR5660030/blast_results.tsv",
